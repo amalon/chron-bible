@@ -19,5 +19,11 @@
  *
  */
 
+% Fallenness
+fallen(_, _) :- fail.
+event(fall(X)) :-
+	fallen(X, _).
+
 :- include('1').
 :- include('2').
+:- include('3').

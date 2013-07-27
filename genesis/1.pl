@@ -57,6 +57,10 @@ event_during(creates(god, light), creation_day1, bible([genesis, 1, 3])).
 
 % Day 6
 
+% Everything was very good at the end of day 6
+events_ordered([end(creation_day6), fall(X)], bible([genesis, 1, 31])) :-
+	fallen(X, _).
+
 % Day 7
 
 % Adam
