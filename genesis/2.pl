@@ -1,5 +1,5 @@
 /*
- * Genesis
+ * Genesis 2
  *
  * Copyright (C) 2012-2013 James Hogan <james@albanarts.com>
  *
@@ -15,9 +15,12 @@
  *
  *
  * Chron facts defining events, periods, geneologies, and chronological
- * constraints for Genesis (in the context of the whole Bible).
+ * constraints for Genesis 2 (in the context of the whole Bible).
  *
  */
 
-:- include('1').
-:- include('2').
+% Eve came from Adam
+event_during(birth(eve), lifetime(adam), bible([genesis, 2, 22])).
+
+% Eve became Adam's wife
+married(adam, eve, bible([genesis, 2, 25])).
