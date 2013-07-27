@@ -1,5 +1,5 @@
 /*
- * The Bible
+ * Genesis
  *
  * Copyright (C) 2012-2013 James Hogan <james@albanarts.com>
  *
@@ -15,10 +15,6 @@
  *
  *
  * Chron facts defining events, periods, geneologies, and chronological
- * constraints for the Bible.
+ * constraints for Genesis (in the context of the whole Bible).
  *
  */
-
-event(epoch).
-
-:- include('genesis/genesis').
