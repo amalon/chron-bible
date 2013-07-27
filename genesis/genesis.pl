@@ -19,6 +19,10 @@
  *
  */
 
+% Define the interval type genesis_years(Years)
+% Use a floor type (like integer year ages, get less precise with each generation)
+derived_interval(genesis_years(Num), floor(Num, year)).
+
 % Fallenness
 fallen(_, _) :- fail.
 event(fall(X)) :-
@@ -28,3 +32,4 @@ event(fall(X)) :-
 :- include('2').
 :- include('3').
 :- include('4').
+:- include('5').
