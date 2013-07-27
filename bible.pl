@@ -22,3 +22,5 @@
 event(epoch).
 
 :- include('genesis/genesis').
+
+events_coincide([epoch, creation], fiat).

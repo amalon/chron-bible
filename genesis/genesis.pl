@@ -18,3 +18,5 @@
  * constraints for Genesis (in the context of the whole Bible).
  *
  */
+
+:- include('1').
