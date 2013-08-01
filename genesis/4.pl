@@ -57,6 +57,9 @@ parent_son(cains_enoch, irad, bible([genesis, 4, 18])).
 parent_son(irad, mehujael, bible([genesis, 4, 18])).
 parent_son(mehujael, mehujaels_lamech, bible([genesis, 4, 18])).
 
+person_name(cains_enoch, 'Enoch').
+person_name(mehujaels_lamech, 'Lamech').
+
 % Lamech's wives
 woman(adah).
 woman(zilah).
