@@ -37,8 +37,8 @@ event_during(abels_offering, lifetime(abel), bible([genesis, 4, 4])).
 murdered(cain, abel, bible([genesis, 4, 8])).
 
 % Cain's curse was relate to Abel's murder
-event(cains_curse).
-events_ordered([death(abel), cains_curse], bible([genesis, 4, 11])).
+event(curse(cain)).
+events_ordered([death(abel), curse(cain)], bible([genesis, 4, 11])).
 
 % Cain then went to live in Nod
 period(cain_lives_in_nod).

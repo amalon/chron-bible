@@ -29,16 +29,16 @@ event_during(fall(mankind), lifetime(eve), bible([genesis, 3, 6])).
 event_during(fall(mankind), lifetime(adam), bible([genesis, 3, 6])).
 
 % Surpent's curse
-event(surpents_curse).
-events_ordered([fall(mankind), surpents_curse], bible([genesis, 3, 14])).
+event(curse(serpent)).
+events_ordered([fall(mankind), curse(serpent)], bible([genesis, 3, 14])).
 
 % Woman's curse
-event(womans_curse).
-events_ordered([fall(mankind), womans_curse], bible([genesis, 3, 16])).
+event(curse(woman)).
+events_ordered([fall(mankind), curse(woman)], bible([genesis, 3, 16])).
 
 % Man's curse
-event(mans_curse).
-events_ordered([fall(mankind), mans_curse], bible([genesis, 3, 17])).
+event(curse(man)).
+events_ordered([fall(mankind), curse(man)], bible([genesis, 3, 17])).
 
 % Eve was the mother of all living, but they were all fallen
 events_ordered([closing_of_eden, conception(Person)], bible([genesis, 3, 20])) :-
@@ -46,5 +46,5 @@ events_ordered([closing_of_eden, conception(Person)], bible([genesis, 3, 20])) :
 
 % Closing of the Garden of Eden
 event(closing_of_eden).
-events_coincide([surpents_curse, womans_curse, mans_curse], bible([genesis, 3])).
-events_ordered([mans_curse, closing_of_eden], bible([genesis, 3, 24])).
+events_coincide([curse(serpent), curse(woman), curse(man)], bible([genesis, 3])).
+events_ordered([curse(man), closing_of_eden], bible([genesis, 3, 24])).
