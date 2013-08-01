@@ -21,6 +21,17 @@
 
 event(epoch).
 
+% describe source
+describe_source(bible([Book]), Shortname) :-
+	bible_book(Book, _, Shortname).
+describe_source(bible([Book, Chap]), Desc) :-
+	bible_book(Book, _, Shortname),
+	Desc = concat([Shortname, ' ', Chap]).
+describe_source(bible([Book, Chap, Verse]), Desc) :-
+	bible_book(Book, _, Shortname),
+	Desc = concat([Shortname, ' ', Chap, ':', Verse]).
+
+bible_book(genesis, 'Genesis', 'Gen').
 :- include('genesis/genesis').
 
 events_coincide([epoch, creation], fiat).
