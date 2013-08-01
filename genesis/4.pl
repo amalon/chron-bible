@@ -86,5 +86,5 @@ age_ordering([abel, seth], bible([genesis, 4, 25])).
 % Seth was probably conceived after Abel's murder
 events_ordered([death(abel), conception(seth)], bible([genesis, 4, 25])).
 
-% Enos
-parent_son(seth, enos, bible([genesis, 4, 26])).
+% Enosh
+parent_son(seth, enosh, bible([genesis, 4, 26])).
