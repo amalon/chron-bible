@@ -28,6 +28,8 @@ fallen(_, _) :- fail.
 event(fall(X)) :-
 	fallen(X, _).
 
+:- include(noah_calendar).
+
 :- include('1').
 :- include('2').
 :- include('3').
