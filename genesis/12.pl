@@ -1,5 +1,5 @@
 /*
- * Genesis
+ * Genesis 12
  *
  * Copyright (C) 2012-2013 James Hogan <james@albanarts.com>
  *
@@ -15,29 +15,15 @@
  *
  *
  * Chron facts defining events, periods, geneologies, and chronological
- * constraints for Genesis (in the context of the whole Bible).
+ * constraints for Genesis 12 (in the context of the whole Bible).
  *
  */
 
-% Define the interval type genesis_years(Years)
-% Use a floor type (like integer year ages, get less precise with each generation)
-derived_interval(genesis_years(Num), floor(Num, year)).
+% Abram moved from Haran to Canaan when we was 75
+period(abram_in_haran).
+events_coincide([begin(terah_in_haran), begin(abram_in_haran)], bible([genesis, 11, 31])).
+event_interval(birth(abram), end(abram_in_haran), genesis_years(75), bible([genesis, 12, 4])).
 
-% Fallenness
-fallen(_, _) :- fail.
-event(fall(X)) :-
-	fallen(X, _).
-
-:- include(noah_calendar).
-
-:- include('1').
-:- include('2').
-:- include('3').
-:- include('4').
-:- include('5').
-:- include('7').
-:- include('8').
-:- include('9').
-:- include('10').
-:- include('11').
-:- include('12').
+% He took Sarai and Lot with him
+event_during(end(abram_in_haran), lifetime(Person), bible([genesis, 12, 5])) :-
+	member(Person, [abram, sarai, lot]).
