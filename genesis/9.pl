@@ -1,5 +1,5 @@
 /*
- * Genesis
+ * Genesis 9
  *
  * Copyright (C) 2012-2013 James Hogan <james@albanarts.com>
  *
@@ -15,26 +15,14 @@
  *
  *
  * Chron facts defining events, periods, geneologies, and chronological
- * constraints for Genesis (in the context of the whole Bible).
+ * constraints for Genesis 9 (in the context of the whole Bible).
  *
  */
 
-% Define the interval type genesis_years(Years)
-% Use a floor type (like integer year ages, get less precise with each generation)
-derived_interval(genesis_years(Num), floor(Num, year)).
+parent_son(ham, canaan, bible([genesis, 9, 18])).
 
-% Fallenness
-fallen(_, _) :- fail.
-event(fall(X)) :-
-	fallen(X, _).
+% Noah lived 350 years after the flood
+event_interval(end(deluge), death(noah), genesis_years(350), bible([genesis, 9, 28])).
 
-:- include(noah_calendar).
-
-:- include('1').
-:- include('2').
-:- include('3').
-:- include('4').
-:- include('5').
-:- include('7').
-:- include('8').
-:- include('9').
+% All Noah's days were 950
+person_lifetime(noah, genesis_years(950), bible([genesis, 9, 29])).
