@@ -23,15 +23,15 @@
 
 % God told Noah to get himself and his family in the Ark
 % 7 days later the rain fell for 40 days and 40 nights
-event(got_tells_noah_get_in_ark).
+event(god_tells_noah_get_in_ark).
 period(deluge_rain).
-event_interval(got_tells_noah_get_in_ark, begin(deluge_rain), time(7, day), bible([genesis, 7, 4])).
+event_interval(god_tells_noah_get_in_ark, begin(deluge_rain), time(7, day), bible([genesis, 7, 4])).
 period_len(deluge_rain, time(40, day), bible([genesis, 7, 4])).
 
 % The flood waters came after 7 days, when Noah was 600
 period(deluge).
 event_interval(birth(noah), begin(deluge), genesis_years(600), bible([genesis, 7, 6])).
-event_interval(got_tells_noah_get_in_ark, begin(deluge), time(7, day), bible([genesis, 7, 10])).
+event_interval(god_tells_noah_get_in_ark, begin(deluge), time(7, day), bible([genesis, 7, 10])).
 % fountains of great deep broken up, windows of heaven opened
 % 600th year, 2nd month, 17th day
 % (repeated)
