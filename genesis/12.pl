@@ -19,11 +19,8 @@
  *
  */
 
-% Abram moved from Haran to Canaan when we was 75
-period(abram_in_haran).
-events_coincide([begin(terah_in_haran), begin(abram_in_haran)], bible([genesis, 11, 31])).
-event_interval(birth(abram), end(abram_in_haran), genesis_years(75), bible([genesis, 12, 4])).
+% Abram moved from Haran to Canaan when we was 75, taking Sarai and Lot with him
+people_group(abram_lot, [abram, lot, sarai]).
+event_interval(birth(abram), move(abram, haran, 1, canaan, 1), genesis_years(75), bible([genesis, 12, 4])).
+people_moved(group(abram_lot), haran, 1, canaan, 1, bible([genesis, 12, 5])).
 
-% He took Sarai and Lot with him
-event_during(end(abram_in_haran), lifetime(Person), bible([genesis, 12, 5])) :-
-	member(Person, [abram, sarai, lot]).

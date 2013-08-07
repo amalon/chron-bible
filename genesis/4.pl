@@ -41,9 +41,8 @@ event(curse(cain)).
 events_ordered([death(abel), curse(cain)], bible([genesis, 4, 11])).
 
 % Cain then went to live in Nod
-period(cain_lives_in_nod).
-period_during(cain_lives_in_nod, lifetime(cain), bible([genesis, 4, 16])).
-events_ordered([death(abel), begin(cain_lives_in_nod)], bible([genesis, 4, 16])).
+dwelt(cain, nod, 1, bible([genesis, 4, 16])).
+events_ordered([death(abel), begin(dwell(cain, nod, 1))], bible([genesis, 4, 16])).
 
 % Cains line
 

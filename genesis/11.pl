@@ -57,9 +57,9 @@ person_name(terahs_nahor, 'Nahor').
 parent_son(haran, lot, bible([genesis, 11, 27])).
 
 % Haran died while Terah in Ur
-period(terah_in_ur).
-period_during(terah_in_ur, lifetime(terah), bible([genesis, 11, 28])).
-period_during(lifetime(haran), terah_in_ur, bible([genesis, 11, 28])).
+people_group(terah_family, [terah, abram, lot, sarai]).
+people_dwelt(group(terah_family), ur, 1, bible([genesis, 11, 28])).
+period_during(lifetime(haran), dwell(terah, ur, 1), bible([genesis, 11, 28])).
 
 % Sarai
 woman(sarai).
@@ -73,12 +73,8 @@ person(iscah).
 parent_child(haran, iscah, bible([genesis, 11, 29])).
 
 % They moved to Harran
-event(terah_moves_to_haran).
-events_coincide([end(terah_in_ur), terah_moves_to_haran, begin(terah_in_haran)],
-		bible([genesis, 11, 31])).
-event_during(terah_moves_to_haran, lifetime(Person), bible([genesis, 11, 31])) :-
-	member(Person, [terah, abram, lot, sarai]).
-period(terah_in_haran).
-period_during(terah_in_haran, lifetime(terah), bible([genesis, 11, 32])).
+people_moved(group(terah_family), ur, 1, haran, 1, bible([genesis, 11, 31])).
+
+% Where Terah died at 205
 person_lifetime(terah, genesis_years(205), bible([genesis, 11, 32])).
-events_coincide([death(terah), end(terah_in_haran)], bible([genesis, 11, 32])).
+event_during(death(terah), dwell(terah, haran, 1), bible([genesis, 11, 32])).

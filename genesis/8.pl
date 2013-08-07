@@ -51,4 +51,5 @@ event_date(noah_saw_dry, noah_calendar(601, 1, 1), bible([genesis, 8, 13])).
 
 % 2nd month, 27th day, earth dried (vs 14).
 % God said to leave Ark, so Noah did
-event_date(end(noah_in_ark), noah_calendar(601, 2, 27), bible([genesis, 8, 14])).
+event_date(end(dwell(Person, ark, 1)), noah_calendar(601, 2, 27), bible([genesis, 8, 14])) :-
+	person_in_group(Person, group(deluge_survivors)).

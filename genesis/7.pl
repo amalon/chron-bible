@@ -38,14 +38,15 @@ event_interval(god_tells_noah_get_in_ark, begin(deluge), time(7, day), bible([ge
 event_date(begin(deluge), noah_calendar(600, 2, 17), bible([genesis, 7, 11])).
 
 % Noah, Sons, Wife, 3 Wife's of Sons entered Ark same day
-period(noah_in_ark).
-events_coincide([begin(deluge), begin(noah_in_ark)], bible([genesis, 7, 13])).
+people_group(deluge_survivors, [noah, noahs_wife, shem, shems_wife,
+				ham,  hams_wife, japheth, japheths_wife]).
+people_dwelt(group(deluge_survivors), ark, 1, bible([genesis, 7, 13])).
+events_coincide([begin(deluge), begin(dwell(Person, ark, 1))], bible([genesis, 7, 13])) :-
+	person_in_group(Person, group(deluge_survivors)).
 
 % Every living thing that breathed including man was destroyed except Noah and
 % those with him on the Ark
-population_bottleneck(end(deluge), [noah, noahs_wife, shem, shems_wife,
-				    ham,  hams_wife, japheth, japheths_wife],
-		      bible([genesis, 7, 23])).
+population_bottleneck(end(deluge), group(deluge_survivors), bible([genesis, 7, 23])).
 
 % The waters prevaled for 150 days
 period_len(deluge, time(150, day), bible([genesis, 7, 24])).
