@@ -19,5 +19,12 @@
  *
  */
 
+% Abraham, Sarah, Ishmael, Hagar traveled to Kadesh.
+people_group(abraham_kadesh, [abram, sarai, ishmael, hagar]).
+people_moved(group(abraham_kadesh), plain_of_mamre, 1, kadesh, 1, bible([genesis, 20, 1])).
+
+% Abimelech
+man(abimelech).
+
 % Sarah is the daughter of Abraham's father, but not his mother.
 parent_child(terah, sarai, bible([genesis, 20, 12])).
