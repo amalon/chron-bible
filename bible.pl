@@ -37,6 +37,14 @@ describe_source(bible([Book, Chap, Verse]), Desc) :-
 mature(Person, time(16, year), fiat) :-
 	born_person(Person).
 
+% weaning - assume somewhere between 2 and 5 years of age
+weaned(_) :- fail.
+event(weaning(Person)) :-
+	weaned(Person).
+event_interval(birth(Person), weaning(Person), time(Years, year), weaning) :-
+	weaned(Person),
+	Years in 2..5.
+
 bible_book(genesis, 'Genesis', 'Gen').
 :- include('genesis/genesis').
 
