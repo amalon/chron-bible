@@ -54,3 +54,4 @@ event(fall(X)) :-
 :- include('24').
 :- include('25').
 :- include('26').
+:- include('27').
