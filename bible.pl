@@ -31,6 +31,12 @@ describe_source(bible([Book, Chap, Verse]), Desc) :-
 	bible_book(Book, _, Shortname),
 	Desc = concat([Shortname, ' ', Chap, ':', Verse]).
 
+% sexual maturity
+% Lets assume around 16 years to space out unknowns
+% Adam & Eve don't count here since they were created mature
+mature(Person, time(16, year), fiat) :-
+	born_person(Person).
+
 bible_book(genesis, 'Genesis', 'Gen').
 :- include('genesis/genesis').
 
