@@ -19,6 +19,11 @@
  *
  */
 
+% All recorded grandchildren of Noah born after the flood
+events_ordered([end(dwell(noah, ark, 1)), birth(Grandchild)], bible([genesis, 10])) :-
+	parent_child(noah, Son, _),
+	parent_child(Son, Grandchild, _).
+
 % The sons of Japheth
 parent_sons(japheth, Sons, bible([genesis, 10, 2])) :-
 	Sons = [gomer, magog, madai, javan, tubai, meshech, tiras].
