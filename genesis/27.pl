@@ -19,6 +19,11 @@
  *
  */
 
+% Isaac blesses Jacob
+event(bless(isaac, jacob)).
+event_during(bless(isaac, jacob), lifetime(Person), bible([genesis, 27, 27])) :-
+	member(Person, [isaac, jacob, esau, rebekah]).
+
 % Rebekah referred to the daughters of Heth
 % It seems that hittites may be descended from Heth
 parent_descendent(heth, hittites, bible([genesis, 27, 46])).
