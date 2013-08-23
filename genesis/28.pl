@@ -19,6 +19,22 @@
  *
  */
 
+% Jacob started in Beer-sheba
+dwelt(jacob, beer_sheba, 1, bible([genesis, 28, 10])).
+
+% Isaac sent Jacob to Laban in Padan-aram
+events_ordered([bless(isaac, jacob), end(dwell(jacob, beer_sheba, 1))],
+		bible([genesis, 28, 5])).
+
+% Bethuel the Syrian (vs 5)
+
 % Esau took Mahalath, daughter of Ishmael, sister of Nebajoth to be his wife
 parent_daughter(ishmael, mahalath, bible([genesis, 28, 9])).
 married(esau, mahalath, bible([genesis, 28, 9])).
+
+% Because Isaac told Jacob not to marry from Canaanites and sent him to Padan-aram
+events_ordered([end(dwell(jacob, beer_sheba, 1)), begin(marriage(esau, mahalath))],
+		bible([genesis, 28, 6])).
+
+% Stopped at Beth-el (previously Luz)
+moved(jacob, beer_sheba, 1, beth_el, 1, bible([genesis, 28, 11])).
