@@ -19,6 +19,10 @@
  *
  */
 
+:- module('bible', []).
+
+:- include(chron(database)).
+
 event(epoch).
 
 % describe source

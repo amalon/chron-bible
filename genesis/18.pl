@@ -28,6 +28,6 @@ event_during(lord_appears_to_abraham, dwell(abram, plain_of_mamre, 1), bible([ge
 
 % Sarah had not yet conceived
 events_ordered([lord_appears_to_abraham, conception(Child)], bible([genesis, 18, 12])) :-
-	parent_child(sarai, Child, _).
+	is_parent_child(sarai, Child, _).
 
 % They then headed for Sodom

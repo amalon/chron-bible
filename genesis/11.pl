@@ -48,7 +48,7 @@ genesis_11_father_son(serug,	serugs_nahor,	 30, 22,  200, 23).
 person_name(serugs_nahor, 'Nahor').
 genesis_11_father_son(serugs_nahor,	terah,	 29, 24,  119, 25).
 event_interval(birth(terah), birth(Son), genesis_years(AtLeastSeventy), bible([genesis, 11, 26])) :-
-	parent_child(terah, Son, _),
+	is_parent_child(terah, Son, _),
 	AtLeastSeventy #>= 70.
 
 % The generations of Terah

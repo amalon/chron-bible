@@ -45,7 +45,7 @@ genesis_5_father_son(lamech,	noah,		182, 28,  595, 30,  777, 31).
 
 % Noah's childbearing years >= 500
 event_interval(birth(noah), birth(Son), genesis_years(Age), bible([genesis, 5, 32])) :-
-	parent_child(noah, Son, _),
+	is_parent_child(noah, Son, _),
 	Age #>= 500.
 % after which he had Shem, Ham, and Japheth
 parent_son(noah, shem, bible([genesis, 5, 32])).
