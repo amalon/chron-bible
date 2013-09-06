@@ -41,10 +41,12 @@ event(curse(man)).
 events_ordered([fall(mankind), curse(man)], bible([genesis, 3, 17])).
 
 % Eve was the mother of all living, but they were all fallen
-events_ordered([closing_of_eden, conception(Person)], bible([genesis, 3, 20])) :-
+events_ordered([closing_of_eden, conception(Person)],
+		[flags([wide]), bible([genesis, 3, 20])]) :-
 	born_person(Person).
 % Use raw_ to avoid infinite recursion through person(Person).
-raw_parent_descendent(eve, Person, bible([genesis, 3, 20])) :-
+raw_parent_descendent(eve, Person,
+		[flags([wide]), bible([genesis, 3, 20])]) :-
 	born_person(Person).
 
 % Closing of the Garden of Eden
