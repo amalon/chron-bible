@@ -46,13 +46,15 @@ noah_days_in_year(_, Days) :-
 noah_days_in_years(Year1, Year2, Days) :-
 	noah_days_in_years_p(Year1, Year2, 0, Days).
 
-noah_days_in_years_p(Year, Year, Total, Total).
 noah_days_in_years_p(Year1, Year2, Total, Output) :-
-	Year1 < Year2,
-	LastYear is Year2 - 1,
-	noah_days_in_year(LastYear, DaysInLastYear),
-	NewTotal #= Total + DaysInLastYear,
-	noah_days_in_years_p(Year1, LastYear, NewTotal, Output).
+	(	Year1 = Year2
+	->	Output = Total
+	;	Year1 < Year2,
+		LastYear is Year2 - 1,
+		noah_days_in_year(LastYear, DaysInLastYear),
+		NewTotal #= Total + DaysInLastYear,
+		noah_days_in_years_p(Year1, LastYear, NewTotal, Output)
+	).
 
 calendar_interval(D1, D2, time(Interval, day)) :-
 	D1 = noah_calendar(Year1, Month1, Day1),
