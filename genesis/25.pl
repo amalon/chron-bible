@@ -42,7 +42,7 @@ parent_sons(midian, Sons, bible([genesis, 25, 4])) :-
 	Sons = [ephah, epher, hanoch, ebidah, eldaah].
 
 % Abraham died at 175
-person_lifetime(abram, genesis_years(165), bible([genesis, 25, 7])).
+person_lifetime(abram, genesis_years(175), bible([genesis, 25, 7])).
 
 % Sons of Ishmael (starting with first born)
 parent_sons(ishmael, Sons, bible([genesis, 25, 13])) :-
