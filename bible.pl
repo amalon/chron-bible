@@ -52,4 +52,7 @@ event_interval(birth(Person), weaning(Person), time(Years, year), weaning) :-
 bible_book(genesis, 'Genesis', 'Gen').
 :- include('genesis/genesis').
 
+bible_book(exodus, 'Exodus', 'Ex').
+:- include('exodus/exodus').
+
 events_coincide([epoch, creation], fiat).
