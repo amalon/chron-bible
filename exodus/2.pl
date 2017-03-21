@@ -1,5 +1,5 @@
 /*
- * Genesis
+ * Exodus 2
  *
  * Copyright (C) 2017 James Hogan <james@albanarts.com>
  *
@@ -14,12 +14,17 @@
  * (in the file called COPYING).
  *
  *
- * Chron facts defining events, periods, geneologies, and chronological
- * constraints for Exodus (in the context of the whole Bible).
+ * Chron facts defining events, periods, genealogies, and chronological
+ * constraints for Exodus 2 (in the context of the whole Bible).
  *
  */
 
-derived_interval(exodus_years(Num), floor(Num, year)).
+% Reuel implied to be a midianite
+parent_descendent(midian, reuel, bible([exodus, 2, 16])).
 
-:- include('2').
-:- include('6').
+woman(zipporah).
+% See Numbers 10:26 regarding reuel likely being Zippora's grandfather
+parent_descendent(reuel, zipporah, bible([exodus, 2, 21])).
+married(moses, zipporah, bible([exodus, 2, 21])).
+
+parents_son([moses, zipporah], gershom, bible([exodus, 2, 22])).
