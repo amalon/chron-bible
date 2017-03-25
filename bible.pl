@@ -55,4 +55,7 @@ bible_book(genesis, 'Genesis', 'Gen').
 bible_book(exodus, 'Exodus', 'Ex').
 :- include('exodus/exodus').
 
+bible_book(chronicles1, '1 Chronicles', '1 Ch').
+:- include('chronicles1/chronicles1').
+
 events_coincide([epoch, creation], fiat).
