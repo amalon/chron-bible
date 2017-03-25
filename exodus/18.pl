@@ -1,5 +1,5 @@
 /*
- * Genesis
+ * Exodus 18
  *
  * Copyright (C) 2017 James Hogan <james@albanarts.com>
  *
@@ -14,13 +14,10 @@
  * (in the file called COPYING).
  *
  *
- * Chron facts defining events, periods, geneologies, and chronological
- * constraints for Exodus (in the context of the whole Bible).
+ * Chron facts defining events, periods, genealogies, and chronological
+ * constraints for Exodus 18 (in the context of the whole Bible).
  *
  */
 
-derived_interval(exodus_years(Num), floor(Num, year)).
-
-:- include('2').
-:- include('6').
-:- include('18').
+parents_son([moses, zipporah], gershom, bible([exodus, 18, 3])).
+parents_son([moses, zipporah], eliezer, bible([exodus, 18, 4])).
