@@ -33,7 +33,13 @@ describe_source(bible([Book, Chap]), Desc) :-
 	Desc = concat([Shortname, ' ', Chap]).
 describe_source(bible([Book, Chap, Verse]), Desc) :-
 	bible_book(Book, _, Shortname),
-	Desc = concat([Shortname, ' ', Chap, ':', Verse]).
+	describe_bible_verse(Verse, VerseDesc),
+	Desc = concat([Shortname, ' ', Chap, ':', VerseDesc]).
+
+describe_bible_verse(range(Verse1, Verse2), Desc) :-
+	Desc = concat([Verse1, '-', Verse2]),
+	!.
+describe_bible_verse(Verse, Verse).
 
 % sexual maturity
 % Lets assume around 16 years to space out unknowns
