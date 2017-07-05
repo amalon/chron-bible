@@ -61,7 +61,12 @@ bible_book(genesis, 'Genesis', 'Gen').
 bible_book(exodus, 'Exodus', 'Ex').
 :- include('exodus/exodus').
 
+bible_book(kings2, '2 Kings', '2 Kgs').
+
 bible_book(chronicles1, '1 Chronicles', '1 Ch').
 :- include('chronicles1/chronicles1').
+
+bible_book(matthew, 'Matthew', 'Mat').
+:- include('matthew/matthew').
 
 events_coincide([epoch, creation], fiat).
