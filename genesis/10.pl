@@ -97,8 +97,8 @@ parent_sons(aram, Sons, bible([genesis, 10, 23])) :-
 	Sons = [uz, hul, gether, mash].
 
 % Salah and Eber
-parent_descendent(arphaxad, salah, bible([genesis, 10, 24])).
-parent_descendent(salah, eber, bible([genesis, 10, 24])).
+parent_son(arphaxad, shelah, bible([genesis, 10, 24])).
+parent_son(shelah, eber, bible([genesis, 10, 24])).
 
 % The sons of Eber
 parent_sons(eber, Sons, bible([genesis, 10, 25])) :-

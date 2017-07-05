@@ -39,8 +39,8 @@ event_interval(end(deluge), birth(arphaxad), genesis_years(2), bible([genesis, 1
 
 %		      father	son	years:	before    after
 genesis_11_father_son(shem,	arphaxad,	100, 10,  500, 11).
-genesis_11_father_son(arphaxad,	salah,		 35, 12,  403, 13).
-genesis_11_father_son(salah,	eber,		 30, 14,  403, 15).
+genesis_11_father_son(arphaxad,	shelah,		 35, 12,  403, 13).
+genesis_11_father_son(shelah,	eber,		 30, 14,  403, 15).
 genesis_11_father_son(eber,	peleg,		 34, 16,  430, 17).
 genesis_11_father_son(peleg,	reu,		 30, 17,  209, 19).
 genesis_11_father_son(reu,	serug,		 32, 20,  207, 21).
