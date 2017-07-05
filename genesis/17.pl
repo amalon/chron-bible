@@ -24,10 +24,10 @@ event(abrahamic_covenant).
 event_interval(birth(abram), abrahamic_covenant, genesis_years(99), bible([genesis, 17, 1])).
 
 % Renamed Abram to Abraham (vs 5)
-person_name(abram, 'Abraham').
+person_rename(abram, abraham, abrahamic_covenant, bible([genesis, 17, 5])).
 
 % Renamed Sarai to Sarah (vs 15)
-person_name(sarai, 'Sarah').
+person_rename(sarai, sarah, abrahamic_covenant, bible([genesis, 17, 15])).
 
 % Abram 99 and Ishmael 13 when circumcised
 event_interval(birth(ishmael), abrahamic_covenant, genesis_years(13), bible([genesis, 17, 25])).
