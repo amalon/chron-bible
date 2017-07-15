@@ -14,7 +14,7 @@
  * (in the file called COPYING).
  *
  *
- * Chron facts defining events, periods, geneologies, and chronological
+ * Chron facts defining events, periods, genealogies, and chronological
  * constraints for Genesis 20 (in the context of the whole Bible).
  *
  */
