@@ -69,4 +69,7 @@ bible_book(chronicles1, '1 Chronicles', '1 Ch').
 bible_book(matthew, 'Matthew', 'Mat').
 :- include('matthew/matthew').
 
+bible_book(luke, 'Luke', 'Luk').
+:- include('luke/luke').
+
 events_coincide([epoch, creation], fiat).

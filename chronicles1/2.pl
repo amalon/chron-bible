@@ -168,8 +168,9 @@ parent_descendent(mizraim, jarha, bible([chronicles1, 2, 34])). % Egyption
 married(jarha, ahlai, bible([chronicles1, 2, 35])).
 parents_son([jarha, ahlai], attai, bible([chronicles1, 2, 35])).
 
-parent_son(attai, nathan, bible([chronicles1, 2, 36])).
-parent_son(nathan, zabad, bible([chronicles1, 2, 36])).
+parent_son(attai, attais_nathan, bible([chronicles1, 2, 36])).
+parent_son(attais_nathan, zabad, bible([chronicles1, 2, 36])).
+person_name(attais_nathan, 'Nathan'). % David also had a Nathan
 
 parent_son(zabad, ephial, bible([chronicles1, 2, 37])).
 parent_son(ephial, ephials_obed, bible([chronicles1, 2, 37])).
