@@ -66,6 +66,9 @@ bible_book(kings2, '2 Kings', '2 Kgs').
 bible_book(chronicles1, '1 Chronicles', '1 Ch').
 :- include('chronicles1/chronicles1').
 
+bible_book(ezra, 'Ezra', 'Ezr').
+:- include('ezra/ezra').
+
 bible_book(matthew, 'Matthew', 'Mat').
 :- include('matthew/matthew').
 
