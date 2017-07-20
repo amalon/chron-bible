@@ -103,7 +103,7 @@ parent_daughter(makir, makirs_daughter, bible([chronicles1, 2, 21])).
 parent_son(makir, gilead, bible([chronicles1, 2, 21])).
 married(perezs_hezron, makirs_daughter, bible([chronicles1, 2, 21])).
 event_interval(birth(perezs_hezron),
-		begin(marriage(perezs_hezron, markirs_daughter)),
+		begin(marriage(perezs_hezron, makirs_daughter)),
 		chronicles1_years(60), bible([chronicles1, 2, 21])).
 parents_son([perezs_hezron, makirs_daughter], segub,
 		bible([chronicles1, 2, 21])).
